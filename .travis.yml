@@ -1,5 +1,11 @@
 language: scala
 
+# Ensure necessary system libraries are present
+addons:
+  apt:
+    packages:
+      - libunwind-dev
+
 # (from: http://www.scala-sbt.org/1.0/docs/Travis-CI-with-sbt.html)
 before_cache:
   # Cleanup the cached directories to avoid unnecessary cache updates
@@ -18,6 +24,6 @@ script:
   - sbt nativeLink
   - file ./target/scala-2.11/scala-native-prac-out
   - ./target/scala-2.11/scala-native-prac-out
-  
+
   # NOTE: This is just a working-test
   - sbt run
