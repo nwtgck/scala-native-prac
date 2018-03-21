@@ -4,7 +4,8 @@ language: scala
 addons:
   apt:
     packages:
-      - libunwind-dev
+      # (from: https://github.com/scala-native/scala-native/blob/c3741a7bfc10a267c0f262651d92a1abba59ab08/bin/travis_setup.sh#L29-L39)
+      - libunwind8-dev
 
 # (from: http://www.scala-sbt.org/1.0/docs/Travis-CI-with-sbt.html)
 before_cache:
