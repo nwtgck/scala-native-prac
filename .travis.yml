@@ -1,15 +1,11 @@
+# (some part from: https://github.com/scalaprops/scalaprops-native-example/blob/61327e8d659e4503f32637359f61cc1a0c000642/.travis.yml)
+
 language: scala
 
-sudo: false
+sudo: required
 
-# Ensure necessary system libraries are present
-addons:
-  apt:
-    packages:
-      # (from: https://github.com/scala-native/scala-native/blob/c3741a7bfc10a267c0f262651d92a1abba59ab08/bin/travis_setup.sh#L29-L39)
-      - libunwind8-dev
-      - libgc-dev
-      - clang
+before_install:
+ - curl https://raw.githubusercontent.com/scala-native/scala-native/21539aa97947f7/bin/travis_setup.sh | bash -x
 
 # (from: http://www.scala-sbt.org/1.0/docs/Travis-CI-with-sbt.html)
 before_cache:
@@ -23,6 +19,7 @@ cache:
   directories:
     - $HOME/.ivy2/cache
     - $HOME/.sbt/boot/
+    - $HOME/.sbt/launchers
 
 script:
   # NOTE: This is just a working-test
