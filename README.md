@@ -1,4 +1,5 @@
 # scala-native-prac
+[![Build Status](https://travis-ci.org/nwtgck/scala-native-prac.svg?branch=master)](https://travis-ci.org/nwtgck/scala-native-prac)
 
 A practice of [scala-native](http://www.scala-native.org/en/latest/).
 
