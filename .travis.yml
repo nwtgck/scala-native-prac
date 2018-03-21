@@ -9,7 +9,10 @@ addons:
       # (from: https://github.com/scala-native/scala-native/blob/c3741a7bfc10a267c0f262651d92a1abba59ab08/bin/travis_setup.sh#L29-L39)
       - libunwind8-dev
       - libgc-dev
-      - clang
+      - clang-3.9
+      - lldb-3.9
+    sources:
+      - llvm-toolchain-trusty-3.9
 
 # (from: http://www.scala-sbt.org/1.0/docs/Travis-CI-with-sbt.html)
 before_cache:
