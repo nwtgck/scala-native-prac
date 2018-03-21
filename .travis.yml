@@ -1,5 +1,7 @@
 language: scala
 
+sudo: false
+
 # Ensure necessary system libraries are present
 addons:
   apt:
