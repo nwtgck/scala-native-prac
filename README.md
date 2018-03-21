@@ -18,6 +18,12 @@ sbt nativeLink
 
 `./target/scala-2.11/scala-native-prac-out ` is a binary file!
 
+## Minimal Configuration
+
+This is a diff of minimal configuration of `scala-native`.
+
+[configuration diff](https://github.com/nwtgck/scala-native-prac/compare/296dc70f93bc4923e546ad02304bff4c866b05e4...3c1f763f5e297cffb15cb94deec0220f5bec4008)
+
 
 ## References
 
