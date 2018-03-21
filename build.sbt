@@ -2,4 +2,9 @@ name := "scala-native-prac"
 
 version := "0.1"
 
-scalaVersion := "2.12.5"
+scalaVersion := "2.11.12"
+
+// Set to false or remove if you want to show stubs as linking errors
+nativeLinkStubs := true
+
+enablePlugins(ScalaNativePlugin)
