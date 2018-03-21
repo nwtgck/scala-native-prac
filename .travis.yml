@@ -1,0 +1,31 @@
+language: scala
+
+sudo: required
+
+before_install:
+ # (from: from: https://github.com/scalaprops/scalaprops-native-example/blob/61327e8d659e4503f32637359f61cc1a0c000642/.travis.yml)
+ - curl https://raw.githubusercontent.com/scala-native/scala-native/21539aa97947f7/bin/travis_setup.sh | bash -x
+
+# (from: http://www.scala-sbt.org/1.0/docs/Travis-CI-with-sbt.html)
+before_cache:
+  # Cleanup the cached directories to avoid unnecessary cache updates
+  - find $HOME/.ivy2/cache -name "ivydata-*.properties" -print -delete
+  - find $HOME/.sbt        -name "*.lock"               -print -delete
+
+# (from: http://www.scala-sbt.org/1.0/docs/Travis-CI-with-sbt.html)
+# These directories are cached to S3 at the end of the build
+cache:
+  directories:
+    - $HOME/.ivy2/cache
+    - $HOME/.sbt/boot/
+     # (from: from: https://github.com/scalaprops/scalaprops-native-example/blob/61327e8d659e4503f32637359f61cc1a0c000642/.travis.yml)
+    - $HOME/.sbt/launchers
+
+script:
+  # NOTE: This is just a working-test
+  - sbt nativeLink
+  - file ./target/scala-2.11/scala-native-prac-out
+  - ./target/scala-2.11/scala-native-prac-out
+
+  # NOTE: This is just a working-test
+  - sbt run
