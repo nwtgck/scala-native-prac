@@ -26,6 +26,7 @@ script:
   - sbt nativeLink
   - file ./target/scala-2.11/scala-native-prac-out
   - ./target/scala-2.11/scala-native-prac-out
+  - ./target/scala-2.11/scala-native-prac-out --times=1004 --fpath="dummy-path"
 
   # NOTE: This is just a working-test
   - sbt run

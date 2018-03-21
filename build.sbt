@@ -8,3 +8,5 @@ scalaVersion := "2.11.12"
 nativeLinkStubs := true
 
 enablePlugins(ScalaNativePlugin)
+
+libraryDependencies += "com.github.scopt" %%% "scopt" % "3.7.0"
