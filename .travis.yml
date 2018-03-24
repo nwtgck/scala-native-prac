@@ -4,7 +4,7 @@ sudo: required
 
 before_install:
  # (from: from: https://github.com/scalaprops/scalaprops-native-example/blob/61327e8d659e4503f32637359f61cc1a0c000642/.travis.yml)
- - curl https://raw.githubusercontent.com/scala-native/scala-native/21539aa97947f7/bin/travis_setup.sh | bash -x
+ - curl https://raw.githubusercontent.com/scala-native/scala-native/master/scripts/travis_setup.sh | bash -x
 
 # (from: http://www.scala-sbt.org/1.0/docs/Travis-CI-with-sbt.html)
 before_cache:
